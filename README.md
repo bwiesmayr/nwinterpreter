@@ -7,7 +7,7 @@ This repository contains the following elements:
 
 
 ## Instructions
-* Download Eclipse IDE Committer Edition [2025-09](https://www.eclipse.org/downloads/packages/release/2025-09/r) for your platform
+* Download Eclipse [IDE Committer Edition 2025-09](https://www.eclipse.org/downloads/packages/release/2025-09/r/eclipse-ide-rcp-and-rap-developers) for your platform
 * Clone the repository of [4diac-ide](https://github.com/eclipse-4diac/4diac-ide)
 * Replace the folder tests/org.eclipse.fordiac.ide.test.fb.interpreter with the one provided in this repository as [a zip file](https://github.com/bwiesmayr/nwinterpreter/blob/main/Performance/org.eclipse.fordiac.ide.test.fb.interpreter.zip)
 * Import all projects from Git into Eclipse IDE (File/Import/Projects from Git)

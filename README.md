@@ -17,3 +17,5 @@ This repository contains the following elements:
 * Right-click on the class and select Run as / JUnit Plug-in Test
   <img width="669" height="308" alt="image" src="https://github.com/user-attachments/assets/562c012b-af55-4ad7-ba84-03bd3b12f840" />
 * The resulting CSV files will be stored in the folder workbench-measurement, which will be created within the project.
+
+For further instructions on how to build the 4diac-ide repository, please see the project documentation at https://github.com/eclipse-4diac/4diac-documentation/blob/main/src/development/building4diac.adoc

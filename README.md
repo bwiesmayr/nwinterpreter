@@ -8,7 +8,7 @@ This repository contains the following elements:
 
 ## Instructions For Replicating the Performance Measurement
 * Download Eclipse [IDE Committer Edition 2025-09](https://www.eclipse.org/downloads/packages/release/2025-09/r/eclipse-ide-rcp-and-rap-developers) for your platform
-* Clone the repository of [4diac-ide](https://github.com/eclipse-4diac/4diac-ide)
+* Clone the repository of [4diac-ide](https://github.com/eclipse-4diac/4diac-ide). The performance measurement was conducted with the [develop version available on 16.12.2025](https://github.com/eclipse-4diac/4diac-ide/tree/b65f73a7c197e813e359b8d8935c7448ae014063). 
 * Replace the folder tests/org.eclipse.fordiac.ide.test.fb.interpreter with the one provided in this repository as [a zip file](https://github.com/bwiesmayr/nwinterpreter/blob/main/Performance/org.eclipse.fordiac.ide.test.fb.interpreter.zip)
 * Import all projects from Git into Eclipse IDE (File/Import/Projects from Git)
 * Within Eclipse IDE, locate the project org.eclipse.fordiac.ide.product and the file org.eclipse.fordiac.ide.product.target and set it as active target platform. Make sure that the target platform is loading (progress bar at the bottom right), if needed, select "Reload target platform".

@@ -4,3 +4,16 @@ This repository contains the following elements:
 * The code added for measuring the execution time of the interpreter [(in a folder)](https://github.com/bwiesmayr/nwinterpreter/tree/main/Performance)
 * The [measurement results](https://github.com/bwiesmayr/nwinterpreter/tree/main/Performance) obtained from the scalability test and the analysis script
 * A package with the full code for potential replication of the measurement results.
+
+
+## Instructions
+* Download Eclipse IDE Committer Edition [2025-09](https://www.eclipse.org/downloads/packages/release/2025-09/r) for your platform
+* Clone the repository of [4diac-ide](https://github.com/eclipse-4diac/4diac-ide)
+* Replace the folder tests/org.eclipse.fordiac.ide.test.fb.interpreter with the one provided in this repository as [a zip file](https://github.com/bwiesmayr/nwinterpreter/blob/main/Performance/org.eclipse.fordiac.ide.test.fb.interpreter.zip)
+* Import all projects from Git into Eclipse IDE (File/Import/Projects from Git)
+* Within Eclipse IDE, locate the project org.eclipse.fordiac.ide.product and the file org.eclipse.fordiac.ide.product.target and set it as active target platform. Make sure that the target platform is loading (progress bar at the bottom right), if needed, select "Reload target platform".
+* Locate the file org.eclipse.fordiac.ide.product in the same folder. You can test that the project was built correctly in the section "Testing". First, select Synchronize and then (optional!) "Launch an Eclipse application". This starts 4diac IDE.
+* To run the performance test, open the project org.eclipse.fordiac.ide.test.fb.interpreter (the modified version). In the folder src, package org.eclipse.fordiac.ide.test.fb.interpreter.fbnetwork, locate the class ReferenceExamplesTestLoopBenchmark.java
+* Right-click on the class and select Run as / JUnit Plug-in Test
+  <img width="669" height="308" alt="image" src="https://github.com/user-attachments/assets/562c012b-af55-4ad7-ba84-03bd3b12f840" />
+* The resulting CSV files will be stored in the folder workbench-measurement, which will be created within the project.

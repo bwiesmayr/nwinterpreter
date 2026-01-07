@@ -30,7 +30,7 @@ This repository contains the following elements:
 For further instructions on how to build the 4diac-ide repository, please see the project documentation at https://github.com/eclipse-4diac/4diac-documentation/blob/main/src/development/building4diac.adoc
 
 ## Instructions For Using the Tool Environment
-To avoid any issues, some features are currently deactivated in the production version of Eclipse 4diac. For comparing traces with EMF compare, override the default comparison mechanism of Eclipse 4diac:
+To avoid any issues, some features are currently deactivated in the production version of Eclipse 4diac. For **comparing traces with EMF compare**, override the default comparison mechanism of Eclipse 4diac:
 * Locate the file plugin.xml in the project org.eclipse.fordiac.ide.fb.interpreter and open the textual editor. 
 * Locate the lines adding the EMF compare attachment and increase the ranking (default is 150):
  ``` 
@@ -38,4 +38,10 @@ To avoid any issues, some features are currently deactivated in the production v
             class="org.eclipse.fordiac.ide.fb.interpreter.compare.FordiacForteInterpreterMatchEngine"
             ranking="1500">
       </engineFactory>
- ``` 
+ ```
+For **visualizing the network traces**, the modeling capabilities need to be activated in the 4diac IDE. In the production version, some platform features are disabled for usability. This can be located in the plugin ```org.eclipse.fordiac.ide```, file ```plugin.xml```. For testing purposes, all activities with ```"activityId="org.eclipse.fordiac.ide.disabledxtensions"``` can be deleted or commented. After starting the 4diac IDE, all menu entries should be available.
+
+Within 4diac IDE, right-click on the project that holds the network traces and select ```Configure/Convert to Modeling Project```. This adds a modeling nature to the project, in addition to the FordiacNature and the Xtext Project Nature. After this process, a file called ```representations.aird``` will be available. Next to the viewpoint list, select ```New...```. 
+<img width="2282" height="940" alt="image" src="https://github.com/user-attachments/assets/6568b205-26dd-43e8-a10f-95b61e5680ac" />
+
+In the dialogue that appears, select ```OpSem```, press ```Next```, select the trace that should be visualized, and press ```Finish```. You have to enter a name for the visualization in the pop-up dialog and press ```OK```. The graphical editor opens automatically.

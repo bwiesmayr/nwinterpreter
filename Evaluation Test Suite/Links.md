@@ -1,4 +1,4 @@
-<img width="304" height="284" alt="image" src="https://github.com/user-attachments/assets/b8c0c749-c952-470e-89e3-63348d8c52df" /># Evaluation Test Suite
+# Evaluation Test Suite
 
 An evaluation test suite is available at https://github.com/eclipse-4diac/4diac-examples/tree/master/compliance_tests
 The project can be opened with a recent 4diac IDE (e.g., 4diac IDE 3.0.2).
@@ -44,3 +44,22 @@ The value of a data pin depends on its initial value (if defined), the initial v
 | Ex4b    |  Explicit type downcast across connections   <img width="622" height="287" alt="image" src="https://github.com/user-attachments/assets/3f6845fc-ea31-45fb-97bf-6ba5b89b5cb3" />  |      Fb1.REQ         |   Fb3.CUO(CV:=1,Q:=TRUE)    |
 | Ex5a    |  Implicit type upcast to ANY   <img width="567" height="299" alt="image" src="https://github.com/user-attachments/assets/db831699-98c6-4ba4-afc5-53f625de871e" />   |      Fb1.CU         |   Fb2.CNF (OUT:=6)   |
 | Ex5b    |  Implicit type upcast to REAL  <img width="561" height="303" alt="image" src="https://github.com/user-attachments/assets/6cef4031-5fae-4e76-85c5-8ca8c008f617" />  |      Fb1.CU         |    Fb2.CNF (OUT:=1.0) |
+
+## Application D: **_04_DataWith**
+Not all values should be considered in the calculation of an FB network, only those associated with an event. The tests cover various data types.
+| Ref | Topic | Trigger Event | Expected Outputs |
+|-----|-------|---------------|-----------------|
+| Ex1a    |   No WITH - no update expected (input)  <img width="341" height="329" alt="image" src="https://github.com/user-attachments/assets/7f1bf37d-eb95-44e0-b8b9-a6ade292603f" /> |      WithInputs.REQ         |  (DO1.OUT:=TRUE), (DO2.OUT:=-10), (DO3.OUT:=15), DO4.CNF(OUT:=2.0)  |
+| Ex1b    |    WITH -  update expected (input)  <img width="341" height="329" alt="image" src="https://github.com/user-attachments/assets/7f1bf37d-eb95-44e0-b8b9-a6ade292603f" /> |      WithInputs.UPDATE         |  (DO1.OUT:=FALSE), (DO2.OUT:=42), (DO3.OUT:=21), DO4.CNF(OUT:=3.14)  |
+|  Ex2a   |   No WITH - no update expected (output)  <img width="364" height="357" alt="image" src="https://github.com/user-attachments/assets/70d9a578-33a8-457e-9946-c6c7f0de1f70" />  |  WithOutputs.REQ           |    (DOI1.OUT:=TRUE, DOI2.OUT:=-42, DOI3.OUT:=21, DOI4.OUT:=3.14)   |
+|  Ex2b   |   WITH - update expected (output)   <img width="364" height="357" alt="image" src="https://github.com/user-attachments/assets/70d9a578-33a8-457e-9946-c6c7f0de1f70" />   |  WithOutputs.UPDATE             |    (DOI1.OUT:=FALSE, DOI2.OUT:=21, DOI3.OUT:=42, DOI4.OUT:=4.9)   |
+
+## Application E: **_05_Adapter**
+Adapters are compound connections. All elements need to be transferred.
+| Ref | Topic | Trigger Event | Expected Outputs |
+|-----|-------|---------------|-----------------|
+| Ex1    |  Event-only adapter  <img width="314" height="101" alt="image" src="https://github.com/user-attachments/assets/1fcdc01c-6825-4c16-9e0f-6faa33a2be3a" />   |       Fb1.REQ       |         Fb1.CNF, Fb1.RSP        |
+| Ex2  |   Combined adapter (events, data)<img width="363" height="109" alt="image" src="https://github.com/user-attachments/assets/6708f5e3-a25c-464f-865f-57cfa655d392" />  |     Fb1.REQ          |     Fb2.CNF (DO1:=5,DOI2:=TRUE)      |
+|  Ex3   |   WITH in adapter   <img width="395" height="109" alt="image" src="https://github.com/user-attachments/assets/79539664-6643-465b-90c1-ac5d7c4d6a68" /> |       Fb1.REQ        |     Fb2.CNF (DO1:=5,DOI2:=FALSE)            |
+| Ex4a    |  Default values of adapter (output)  <img width="174" height="135" alt="image" src="https://github.com/user-attachments/assets/f82ee7ff-09a0-4b08-a315-8d5852f26da1" />|     REQ          |   CNF(DI1:=42,DI2:=TRUE,DO1:=0,DO2:=FALSE)   |
+|  Ex4b  |  Default values of adapter (input) <img width="167" height="124" alt="image" src="https://github.com/user-attachments/assets/f4d3e02c-4a51-4c67-99ad-e15b59e15102" />    |    REQ           |  CNF(DI1:=42,DI2:=TRUE,DO1:=0,DO2:=FALSE)         |

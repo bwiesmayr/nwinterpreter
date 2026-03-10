@@ -6,6 +6,17 @@ This repository contains the following elements:
 * A package with the full code for potential replication of the measurement results.
 * The Eclipse 4diac project with the [IEC 61499 code](https://github.com/bwiesmayr/nwinterpreter/blob/main/Performance/Fordiac_Project_For_Performance_Test.zip) used for the performance analysis, so that it can be further edited in Eclipse 4diac if needed.
 
+> [!NOTE]
+> The code for the implementation can be found at the official repository of 4diac IDE [LINK](https://github.com/eclipse-4diac/4diac-ide/tree/develop/plugins). The status described in the paper refers to Commit 50917ffd741e3bdbf0eb24e3d48f1b93443ff7ed.
+> *  ``` org.eclipse.fordiac.ide.fb.interpreter  ```  holds the [meta-model](https://github.com/eclipse-4diac/4diac-ide/tree/develop/plugins/org.eclipse.fordiac.ide.fb.interpreter/model)  and the [main classes](https://github.com/eclipse-4diac/4diac-ide/tree/develop/plugins/org.eclipse.fordiac.ide.fb.interpreter/src/org/eclipse/fordiac/ide/fb/interpreter). 
+> *  ```org.eclipse.fordiac.ide.fb.interpreter.edit``` contains mostly generated code 
+> *  ```org.eclipse.fordiac.ide.fb.interpreter.editor``` contains mostly generated code
+> *  ```org.eclipse.fordiac.ide.fb.interpreter.design``` contains the Sirius-related content
+> *  ```org.eclipse.fordiac.ide.test.fb.interpreter ``` containts the automated test cases
+
+ > [!NOTE]
+> For using the interpreter, it is best to visit https://eclipse.dev/4diac/download/ and download 4diac IDE 3.0.2 for your platform. The interpreter is included in the official product.
+
 ## Instructions For Replicating the Performance Measurement
 * Download Eclipse [IDE Committer Edition 2025-09](https://www.eclipse.org/downloads/packages/release/2025-09/r/eclipse-ide-rcp-and-rap-developers) for your platform
 * Clone the repository of [4diac-ide](https://github.com/eclipse-4diac/4diac-ide). The performance measurement was conducted with the [develop version available on 16.12.2025](https://github.com/eclipse-4diac/4diac-ide/tree/b65f73a7c197e813e359b8d8935c7448ae014063). 

@@ -12,7 +12,7 @@ This repository contains the following elements:
 > *  ```org.eclipse.fordiac.ide.fb.interpreter.edit``` contains mostly generated code 
 > *  ```org.eclipse.fordiac.ide.fb.interpreter.editor``` contains mostly generated code
 > *  ```org.eclipse.fordiac.ide.fb.interpreter.design``` contains the Sirius-related content
-> *  ```org.eclipse.fordiac.ide.test.fb.interpreter ``` containts the automated test cases
+> *  ```org.eclipse.fordiac.ide.test.fb.interpreter ``` contains the automated test cases
 
  > [!NOTE]
 > For using the interpreter, it is best to visit https://eclipse.dev/4diac/download/ and download 4diac IDE 3.0.2 for your platform. The interpreter is included in the official product.
